@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" href="images/logo.png" type="imafe/x-icon" />
+	<meta charset="UTF-8" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="style/shared.css" />
+	<link rel="stylesheet" href="contact/style.css">
+	<title>report</title>
+	
+<body>
+	<header>
+     
+        <img class="logo" src="images\logo.png" alt="logo" />
+      
+
+      <nav>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="schedule.html">schedule</a></li>
+          <li><a href="professors.html">professors</a></li>
+          <li><a href="lists.html">lists</a></li>
+          <li><a href="ticket.html">report</a></li>
+        </ul>
+      </nav>
+	</header>
+	  <!-- Container for the report form -->
+
+    <div class="container">
+      <!-- Form for submitting a report -->
+		<form onsubmit id="reportForm"> 
+			<h3>REPORT</h3> 
+      <!-- Input field for name -->
+			<input type="text" id="name" placeholder="Nom et Prenom" required>
+      <!-- Input field for email -->
+			<input type="email" id="email" placeholder="Email address" required>
+      <!-- Input field for phone number -->
+			<input type="text" id="studentID" placeholder="Numero de Telephone" required>
+      <!-- Input field for student ID -->
+			<input type="text" id="phone" placeholder="Student ID" required>
+      <!-- Textarea for additional comments or help -->
+			<textarea id="text" rows="4" placeholder="Comment est-ce que nous pouvons vous aider ?" required></textarea>
+      <!-- Submit button for the form -->
+			<button type="submit"  >Submit</button> 
+		</form>
+	</div>
+  <!-- Popup that appears after form submission -->
+	<div class="popup" id="popup" onclick="closePopup()">
+		<img src="icons/tick.png" />
+		<h2>thank you</h2>
+		<p>your report has been Submitted</p>
+    <!-- Button to close the popup -->
+		<button type="button" onclick="closePopup()">OK</button>
+	</div>
+	
+  <footer>
+      <ul>
+        <li>
+          <a
+            href="https://maps.google.com/maps?ll=36.770637,3.055328&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=11753670107331157339"
+            ><img src="icons/location.png" alt="location icon" />
+          </a>
+        </li>
+        <li>
+          <a href="mailto:contact@univ-alger.dz"
+            ><img src="icons/email.png" alt="email icon"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+
+<script>
+	 // Reference to the popup element
+    let popup = document.getElementById("popup");
+
+    // Event listener for the report form submission
+    document.getElementById("reportForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+      openPopup();
+    });
+// Function to open the popup
+    function openPopup() {
+      popup.classList.add("open-popup");
+    }
+// Function to close the popup
+    function closePopup() {
+      popup.classList.remove("open-popup");
+    }
+</script>	
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+/* Base styles for all devices */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+header ul {
+  display: flex;
+}
+
+header li {
+  margin-left: 30px;
+}
+
+header a {
+  font-family: "Poetsen One";
+  font-size: 20px;
+  color: #ee7002;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 2px 1px 2px #080606;
+  border-radius: 6px;
+}
+
+header a:hover {
+  color: #29180a;
+  background-color: #ee7002;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  background: linear-gradient(180deg, rgb(8, 4, 0), rgb(53, 49, 49));
+  margin-top: auto;
+  height: 10vh;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  padding: auto;
+  width: 5.56vh;
+  height: 5.56vh;
+  margin: 0px 4.6vh;
+  font-size: 1.39px;
+  text-align: center;
+}
+
+footer img {
+  width: 10vh;
+  height: 10vh;
+}
+
+/* Styles for phones */
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .logo {
+    width: 50px; /* Smaller logo for smaller screens */
+    height: 50px;
+  }
+
+  header ul {
+    flex-direction: column; /* Stack the navigation items */
+    align-items: flex-start;
+  }
+
+  header li {
+    margin-left: 0; /* Remove left margin */
+    margin-bottom: 10px; /* Add space between items */
+  }
+
+  header a {
+    font-size: 16px; /* Smaller font size for smaller screens */
+  }
+
+  footer {
+    margin-top: 10px;
+    height: 90px;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer li {
+    width: auto; /* Allow footer items to grow as needed */
+    margin: 20px 0; /* Add space between items */
+  }
+}
+
+/* Styles for tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  header {
+    padding: 15px 30px; /* Slightly reduced padding for tablets */
+  }
+
+  .logo {
+    width: 80px; /* Adjust logo size for tablets */
+    height: 80px;
+  }
+
+  /* Additional tablet-specific styles here */
+}

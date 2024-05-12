@@ -1,0 +1,93 @@
+body {
+  background: linear-gradient(30deg, rgb(19, 30, 54), rgb(23, 41, 54));
+}
+header {
+  position: relative;
+}
+
+#hero-content {
+  width: 80%;
+
+  background-color: rgb(24, 28, 26);
+  box-shadow: 2px 4px 8px #5a5e60;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2vw 4vw;
+  margin: 0 auto; /* Ensures horizontal centering */
+}
+#hero-content h2 {
+  text-transform: capitalize;
+  color: aliceblue;
+}
+
+main {
+  height: 100vh;
+}
+main ul {
+  margin: 40px auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* More explicit and maintainable */
+  gap: 20px 20px; /* Uniform gap for simplicity */
+}
+
+main li {
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 9px;
+  overflow: hidden;
+}
+li:nth-of-type(3) {
+  grid-column: 1 / span 2;
+}
+
+main a {
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+}
+main h3 {
+  padding: 0 90px;
+  border-radius: 50px;
+}
+main h3:hover {
+  background: rgb(7, 11, 240);
+}
+footer {
+  margin-top: 100px;
+}
+@media only screen and (max-width: 480px) {
+  #hero-content {
+    padding: 5vw; /* Increase padding for smaller screens */
+  }
+
+  main ul {
+    width: 100%;
+  }
+
+  main li {
+    padding: 10px; /* Add padding to list items */
+  }
+
+  main h3 {
+    padding: 0 20px; /* Adjust padding for headings */
+  }
+}
+
+/* Media queries for tablets and iPads */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  #hero-content {
+    padding: 3vw 6vw; /* Adjust padding for tablets */
+  }
+
+  main ul {
+    width: 95%; /* Adjust width for tablets */
+    grid-template-columns: repeat(2, 1fr); /* Maintain two columns */
+  }
+
+  main h3 {
+    padding: 0 40px; /* Adjust padding for headings */
+  }
+}

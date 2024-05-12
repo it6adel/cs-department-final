@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+#hero {
+  height: 100vh;
+  background-image: url("hero.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#hero-content {
+  width: 100%;
+  background-color: rgba(51, 47, 47, 0.8);
+  box-shadow: 2px 4px 8px #dfdfdf;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2vw 4vw;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); /* Adjust for exact centering*/
+}
+
+#hero-content h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #f4f4f4f7;
+  margin: 0;
+}
+
+#hero-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #efb488f7;
+  margin: 0;
+}
+
+#section2 {
+  padding: 2vw 4vw;
+  background: linear-gradient(30deg, rgb(19, 30, 54), rgb(23, 41, 54));
+}
+
+#section2 h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 40px;
+  color: rgba(237, 199, 170, 0.873);
+  margin: 24px 0;
+}
+
+#cources {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.cource {
+  text-align: center;
+  margin: 0 20px;
+  text-transform: capitalize;
+}
+
+.cource img {
+  height: 200px; /* Fixed height in pixels */
+  width: auto; /* Set width to auto to maintain aspect ratio */
+  box-shadow: 2px 4px 8px rgba(51, 47, 47, 0.8);
+  border-radius: 15px;
+  object-fit: cover; /* This will cover the area of the box without stretching the image */
+}
+
+.cource p {
+  color: rgba(237, 199, 170, 0.873);
+}
+
+.cource strong {
+  color: #ffd17af7;
+}
+@media (max-width: 768px) {
+  #hero {
+    height: 50vh; /* Adjust hero height for tablet devices */
+  }
+
+  #hero-content h1 {
+    font-size: 32px; /* Adjust font size for readability on tablets */
+  }
+
+  #hero-content p {
+    font-size: 16px; /* Adjust font size for readability on tablets */
+  }
+
+  #section2 h2 {
+    font-size: 28px; /* Adjust heading size for section2 on tablets */
+  }
+  #cources {
+    flex-wrap: wrap;
+    flex-direction: column; /* Stack courses vertically on smaller screens */
+    align-items: center; /* Center courses when stacked */
+  }
+  .cource img {
+    width: 50%; /* Full width images within their containers */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Responsive styles for phones */
+@media (max-width: 480px) {
+  #hero {
+    height: 80vh; /* Adjust hero height for phone devices */
+  }
+
+  #hero-content {
+    padding: 5vw; /* Increase padding for smaller screens */
+  }
+
+  #hero-content h1 {
+    font-size: 24px; /* Adjust font size for readability on phones */
+  }
+
+  #hero-content p {
+    font-size: 14px; /* Adjust font size for readability on phones */
+  }
+
+  #section2 h2 {
+    font-size: 22px; /* Adjust heading size for section2 on phones */
+  }
+
+  #cources {
+    flex-wrap: wrap;
+    flex-direction: column; /* Stack courses vertically on smaller screens */
+    align-items: center; /* Center courses when stacked */
+  }
+
+  .cource {
+    margin: 10px 0 50px; /* Adjust margin for courses on phones */
+  }
+
+  .cource img {
+    height: 120px; /* Adjust image size for phones */
+  }
+}
